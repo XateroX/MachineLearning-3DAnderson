@@ -1,0 +1,14 @@
+import pandas as pd
+#a = [1,2,3]
+#b = [5,5,6]
+#nsam_res = "-5000-s100"
+data_csv = pd.DataFrame( np.array(sys_sizes) )
+data_csv[1] = np.array(sys_scores)
+print(data_csv)
+data_csv.to_csv(devhomepath + 'MachineLearning-Anderson/src/plots/performance_metrics/' + 'sys_size_val_accuracy-' + 'e' + str(myepochs) + '-' + nsam_res + '-' + 'seed_' + str(myseed) + '.csv')
+
+import pandas as pd
+data_csv = pd.DataFrame( np.array(sys_sizes) )
+data_csv[1] = np.array(sys_loss)
+print(data_csv)
+data_csv.to_csv(devhomepath + 'MachineLearning-Anderson/src/plots/performance_metrics/' + 'sys_size_loss-' + 'e' + str(myepochs) + '-' + nsam_res + '-' + 'seed_' + str(myseed) + '.csv')
